@@ -6,23 +6,23 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import edu.uspg.dao.ICursoDAO;
-import edu.uspg.model.Curso;
-import edu.uspg.service.ICursoService;
+import edu.uspg.dao.ITokenDAO;
+import edu.uspg.model.Token;
+import edu.uspg.service.ITokenService;
 
 @Service
-public class CursoServiceImpl implements ICursoService {
+public class TokenServiceImpl implements ITokenService {
 
 	@Autowired
-	private ICursoDAO dao;
+	private ITokenDAO dao;
 	
 	@Override
-	public Curso registrar(Curso t) {
+	public Token registrar(Token t) {
 		return dao.save(t);
 	}
 
 	@Override
-	public Curso modificar(Curso t) {
+	public Token modificar(Token t) {
 		return dao.save(t);
 	}
 
@@ -32,12 +32,12 @@ public class CursoServiceImpl implements ICursoService {
 	}
 
 	@Override
-	public Optional<Curso> listarPorId(int id) {
+	public Optional<Token> listarPorId(int id) {
 		return dao.findById(id);
 	}
 
 	@Override
-	public List<Curso> listar() {
+	public List<Token> listar() {
 		return dao.findAll();
 	}
 

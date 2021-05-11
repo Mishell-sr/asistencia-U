@@ -6,38 +6,38 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import edu.uspg.dao.ICursoDAO;
-import edu.uspg.model.Curso;
-import edu.uspg.service.ICursoService;
+import edu.uspg.dao.ICarreraDAO;
+import edu.uspg.model.Carrera;
+import edu.uspg.service.ICarreraService;
 
 @Service
-public class CursoServiceImpl implements ICursoService {
+public class CarreraServiceImpl implements ICarreraService {
 
 	@Autowired
-	private ICursoDAO dao;
+	private ICarreraDAO dao;
 	
 	@Override
-	public Curso registrar(Curso t) {
+	public Carrera registrar(Carrera t) {
 		return dao.save(t);
 	}
 
 	@Override
-	public Curso modificar(Curso t) {
+	public Carrera modificar(Carrera t) {
 		return dao.save(t);
 	}
 
 	@Override
 	public void eliminar(int id) {
-		dao.deleteById(id);
+		dao.deleteById(id);		
 	}
 
 	@Override
-	public Optional<Curso> listarPorId(int id) {
+	public Optional<Carrera> listarPorId(int id) {
 		return dao.findById(id);
 	}
 
 	@Override
-	public List<Curso> listar() {
+	public List<Carrera> listar() {
 		return dao.findAll();
 	}
 
