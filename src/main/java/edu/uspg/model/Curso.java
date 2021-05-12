@@ -19,7 +19,7 @@ public class Curso {
 	Integer idCurso;
 	
 	@ManyToOne
-	@JoinColumn(name="id_carrera",nullable = false, foreignKey = @ForeignKey(name = "curso_darrera"))
+	@JoinColumn(name="id_carrera",nullable = false, foreignKey = @ForeignKey(name = "curso_carrera"))
 	Carrera carrera;
 	@Column(name = "nombre", nullable = false, length = 50)
 	String nombre;
@@ -51,8 +51,6 @@ public class Curso {
 	public void setCreditos(Integer creditos) {
 		this.creditos = creditos;
 	}
-	
-	
 	
 	
 }
