@@ -21,9 +21,9 @@ public class Asistencia  {
 	@ManyToOne
 	@JoinColumn(name="id_CursoCatedratico",nullable = false, foreignKey = @ForeignKey(name = "asistencia_curso_catedratico"))
 	CursoCatedratico cursoCatedratico;
-	@Column(name = "fecha_inicio", nullable = false, length = 5)
+	@Column(name = "fecha_inicio", nullable = false, length = 10)
 	String fechaInicio;
-	@Column(name = "fecha_fin", nullable = false, length = 5)
+	@Column(name = "fecha_fin", nullable = false, length = 10)
 	String fechaFin;
 	
 		
